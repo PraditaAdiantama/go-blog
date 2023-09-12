@@ -31,14 +31,28 @@
                             <?php echo get_avatar($comment, 60) ?>
                         </div>
                         <div>
-                            <a href="<?php comment_author_url_link() ?>" class="text-decoration-none">
-                                <span><?php echo get_comment_author() ?></span>
-                            </a>
+                            <span><?php echo get_comment_author() ?></span>
                             <p><?php comment_text() ?></p>
+                            <div class="d-flex">
+                                <?php edit_comment_link("Edit") ?>
+                                <?php echo get_comment_reply_link() ?>
+                            </div>
                         </div>
                     </div>
                 </div>
             <?php endforeach; ?>
+        </div>
+        <hr>
+        <div>
+            <?php
+            $form = comment_form(array(
+                "title_reply_before" => "<h3 id='reply-title' class='text-center py-5'>",
+                "title_reply_after" => "</h3>",
+                "class_submit" => "btn btn-primary mt-3",
+                "logged_in_as" => "",
+                "comment_field" => "<textarea id='comment' class='w-100' name='comment' cols='45' rows='8' maxlegth='65525' required='required'></textarea>"
+            ))
+            ?>
         </div>
     </div>
 </div>
