@@ -1,8 +1,7 @@
 <?php
 function learn_register_assets()
 {
-    wp_enqueue_style("learn-css", get_template_directory_uri() . "/assets/css/main.css", array(), false, "all");
-    wp_enqueue_style("poppins-font", get_template_directory_uri() . "/assets/fonts/Poppins-Light.ttf", array(), false, "all");
+    wp_enqueue_style("go-blog-css", get_template_directory_uri() . "/assets/css/main.css", array(), false, "all");
     wp_enqueue_style("bootstrap-css", get_template_directory_uri() . '/assets/css/bootstrap.css', array(), false, 'all');
     wp_enqueue_script("bootstrap-js", get_template_directory_uri() . '/assets/js/bootstrap.js', array(), false, 'all');
 }
